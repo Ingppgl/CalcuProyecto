@@ -269,6 +269,9 @@ public class Calculator extends AppCompatActivity {
 
                     if (Double.valueOf(InComing.substring(InComing.indexOf(".") + 1, InComing.length())) <= 0) {
                         InComing = (InComing.substring(0, InComing.length() - 2));
+                        p = 0;
+                    } else {
+                        p = 1;
                     }
                     exit.setText(InComing);
                 }
@@ -305,8 +308,11 @@ public class Calculator extends AppCompatActivity {
 
                     if (Double.valueOf(InComing.substring(InComing.indexOf(".") + 1, InComing.length())) <= 0) {
                         InComing = (InComing.substring(0, InComing.length() - 2));
-                    }
+                        p = 0;
+                    } else {
+                        p = 1;
 
+                    }
                     exit.setText(InComing);
                 }
             }
