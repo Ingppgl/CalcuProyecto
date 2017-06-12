@@ -241,7 +241,6 @@ public class Calculator extends AppCompatActivity {
             }
         });
 
-
         divide = (Button) findViewById(R.id.button_divide);
         divide.setOnClickListener(new View.OnClickListener() {
             @Override
