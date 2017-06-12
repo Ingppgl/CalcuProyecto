@@ -304,13 +304,15 @@ public class Calculator extends AppCompatActivity {
                     if (op == 4) {
                         InComing = (divide(num1, num2));
                     }
+                    if (!InComing.toLowerCase().equals("error")) {
 
-                    if (Double.valueOf(InComing.substring(InComing.indexOf(".") + 1, InComing.length())) <= 0) {
-                        InComing = (InComing.substring(0, InComing.length() - 2));
-                        p = 0;
-                    } else {
-                        p = 1;
+                        if (Double.valueOf(InComing.substring(InComing.indexOf(".") + 1, InComing.length())) <= 0) {
+                            InComing = (InComing.substring(0, InComing.length() - 2));
+                            p = 0;
+                        } else {
+                            p = 1;
 
+                        }
                     }
                     exit.setText(InComing);
                 }
