@@ -263,7 +263,6 @@ public class Calculator extends AppCompatActivity {
 
                 if (exit.getText().length() > 0 && !exit.getText().equals(POINT)) {
 
-
                     num2 = Double.valueOf(exit.getText().toString()) * (-1);
                     InComing = String.valueOf(num2);
 
