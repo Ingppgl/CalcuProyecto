@@ -38,7 +38,7 @@ public class Calculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
-
+//        actionBar().hide();
         history = (Button) findViewById(R.id.button_history);
         history.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,8 +60,6 @@ public class Calculator extends AppCompatActivity {
                     exit = (TextView) findViewById(R.id.screen);
 
                     InComing = exit.getText().toString() + POINT;
-
-                    InComing  = exit.getText().toString() + POINT;
 
                     exit.setText(InComing);
                 }
@@ -265,8 +263,15 @@ public class Calculator extends AppCompatActivity {
                 exit = (TextView) findViewById(R.id.screen);
 
                 if (exit.getText().length() > 0 && !exit.getText().equals(POINT)) {
+
+
                     num2 = Double.valueOf(exit.getText().toString()) * (-1);
-                    exit.setText(String.valueOf(num2));
+                    InComing = String.valueOf(num2);
+
+                    if (Double.valueOf(InComing.substring(InComing.indexOf(".") + 1, InComing.length())) <= 0) {
+                        InComing = (InComing.substring(0, InComing.length() - 2));
+                    }
+                    exit.setText(InComing);
                 }
             }
         });
@@ -298,6 +303,11 @@ public class Calculator extends AppCompatActivity {
                     if (op == 4) {
                         InComing = (divide(num1, num2));
                     }
+
+                    if (Double.valueOf(InComing.substring(InComing.indexOf(".") + 1, InComing.length())) <= 0) {
+                        InComing = (InComing.substring(0, InComing.length() - 2));
+                    }
+
                     exit.setText(InComing);
                 }
             }
