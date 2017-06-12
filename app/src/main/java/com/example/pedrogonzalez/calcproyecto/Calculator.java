@@ -311,7 +311,6 @@ public class Calculator extends AppCompatActivity {
                             p = 0;
                         } else {
                             p = 1;
-
                         }
                     }
                     exit.setText(InComing);
