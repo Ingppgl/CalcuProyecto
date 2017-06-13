@@ -21,6 +21,6 @@
     <string name="sign">+/-</string>
     <string name="equal">=</string>
     <string name="history">H</string>
-    <string name="borrar_historial">Borrar Historial</string>
+    <string name="clear_history">Borrar Historial</string>
     <string name="volver">Volver</string>
 </resources>

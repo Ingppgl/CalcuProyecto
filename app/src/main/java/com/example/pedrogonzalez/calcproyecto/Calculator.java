@@ -32,7 +32,7 @@ public class Calculator extends AppCompatActivity {
     float num1 = 0, num2 = 0;
     TextView exit;
     String InComing;
-    String past[] = new String[5];
+    public static String past[] = {"1","2","3","4","5"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +45,9 @@ public class Calculator extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Calculator.this, MainActivity2.class);
                 startActivity(intent);
-                exit = (TextView) findViewById(R.id.screen);
-                InComing = past[0] + "\n" + past[1] + "";
-                exit.setText(InComing);
+//                Exit = (TextView) findViewById(R.id.screen);
+//                inComing = past[0] + "\n" + past[1] + "";
+//                Exit.setText(inComing);
             }
         });
 
