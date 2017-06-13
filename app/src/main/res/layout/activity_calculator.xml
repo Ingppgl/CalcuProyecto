@@ -8,14 +8,14 @@
     <TextView
         android:id="@+id/screen"
         android:layout_width="match_parent"
-        android:layout_height="155dp"
+        android:layout_height="157dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@android:color/white"
         android:ellipsize="end"
         android:gravity="end"
         android:textSize="40sp"
-        android:maxLength="13"
+        android:maxLength="18"
         android:maxLines="2"/>
 
     <Button
